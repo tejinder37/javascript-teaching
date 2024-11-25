@@ -1,4 +1,5 @@
-// Objects => Object is collection of key value pairs or It uses named properties.It is created by {}.
+// Objects => Object is collection of key value pairs or It uses named properties.
+//It is created by {}.
 
 let dhruv = {
   name: "Dhruv",
