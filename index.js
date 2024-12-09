@@ -1,15 +1,13 @@
-// alert("My name is Tejinder Singh");
+//
 
-let myName = "Bunty";
-//fn i.e. used to log the value.
-console.log(myName);
+let test = "Tejinder Singh";
 
-myName = "Dhruv";
-console.log(myName);
+let count = 0;
+const vowels = "aeiouAEIOU";
+for (let char of test) {
+  if (vowels.includes(char)) {
+    count++;
+  }
+}
 
-const fullName = "Harkirat Singh";
-console.log(fullName);
-
-// This will throw an error index.js:13 Uncaught TypeError: Assignment to constant variable
-fullName = "Tejinder Singh";
-console.log(fullName);
+console.log(count);
