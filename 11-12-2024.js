@@ -59,12 +59,15 @@ sumOfTwo(...nums); // using spread
 
 let sumOfAnyNumbers = (...params) => {
   // fn's rest parameter
+
   let result = 0;
   for (let num of params) {
     result += num;
   }
   return result;
 };
+
 let numbers = Array.from({ length: 20 }, (_, idx) => idx + 1);
+
 let result = sumOfAnyNumbers(...numbers); // spread operator
 console.log(result);
