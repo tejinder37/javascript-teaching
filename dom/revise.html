@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>Learning about Document object model</div>
+    <h1 id="hello">Test</h1>
+
+    <!-- Inline events -->
+
+    <!-- <button 
+      onclick="changeColor()"
+      onmouseover="changeColor()"
+      onmouseleave="changeColor('orange')"
+    >
+      change color
+    </button> -->
+    <button id="btn">Click me</button>
+    <button id="btn" onclick="changeColor()">change color</button>
+    <script>
+      let element = document.getElementById("hello");
+      let button = document.querySelector("#btn");
+      console.log(button);
+
+      //   The load event is fired when the whole page has loaded,
+      // including all dependent resources such as stylesheets, scripts, iframes,
+      //  and images, except those that are loaded lazily.
+      // This is in contrast to DOMContentLoaded, which is fired as
+      // soon as the page DOM has been loaded, without waiting for resources to finish loading.
+      //   Use the event name in methods like addEventListener(), or set an event handler property.
+      window.onload = () => {
+        element.style.color = "red";
+      };
+
+      function changeColor(color = "black") {
+        element.style.color = color;
+        element.style.fontSize = "30px";
+      }
+
+      // When we add event using addEventListener then inside the callback
+      //  we have only only one parameter i.e. event object & this is by default.
+      button.addEventListener("click", changeColor);
+    </script>
+  </body>
+</html>
+
+<!-- The Document Object Model (DOM) is a programming interface for web documents. It
+represents the page so that programs can change the document structure, style,
+and content. The DOM represents the document as nodes and objects; that way,
+programming languages can interact with the page. -->
+
+<!-- Node => Element + data. -->
+
+// Dom has methods(fns) & properties. // Important methods // Selectors =>
+querySelector(), querySelectorAll(), getElementById(), getElementsByClassName(),
+getElementsByTagName()

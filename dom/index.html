@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="para">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos,
+      blanditiis?
+    </p>
+    <p id="para">Some text here</p>
+
+    <button onclick="changeColor('blue');">blue</button>
+    <button onclick="changeColor('red');">red</button>
+    <button onclick="changeColor();">Green</button>
+
+    <script>
+      function changeColor(newColor = "green") {
+        // classname selector collection of html element
+        //   const elements = document.getElementsByClassName("para");
+        //    for(let element of elements){
+        //     element.style.color = newColor
+        //    }
+
+        // using tagName selector
+
+        // let elements = document.getElementsByTagName("p");
+        // for (let element of elements) {
+        //   element.style.color = newColor;
+        // }
+
+        // It allows us to use many type of attributes in this. but in this we have to add #for id .for class & we can use tagname direct
+        // & it selects the first matching element.
+        let element = document.querySelector(".para");
+        let element2 = document.querySelector("#para");
+        element.style.color = newColor;
+        element2.style.color = newColor;
+        element2.style.fontSize = "40px";
+        element2.style.fontWeight = "bold";
+      }
+    </script>
+  </body>
+</html>
+
+<!-- // DOM => document object model => The Document interface represents any web
+page loaded in the browser and serves as an entry point into the web page's
+content, which is the DOM tree. The DOM tree includes elements such as
+<body>
+  and
+  <table>
+    , among many others. It provides functionality globally to the document,
+    like how to obtain the page's URL and create new elements in the document
+  </table>
+</body> -->

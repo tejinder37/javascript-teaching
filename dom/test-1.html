@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      id="div1"
+      onmouseenter="changeColor('pink')"
+      onmouseleave="changeColor('black')"
+    >
+      The text above has been created dynamically.
+    </div>
+    <script>
+      const changeColor = (newColor) => {
+        let div = document.getElementById("div1");
+        div.style.color = newColor;
+      };
+
+      //creating new element
+      //   let newDiv = document.createElement("h1");
+
+      //   // creating text node (creating text that can be added to any element) using createTextNode
+      //   let text = document.createTextNode("My name is Bunty");
+      //   newDiv.appendChild(text);
+      //   console.log(newDiv);
+      //   let prevDiv = document.getElementById("div1");
+
+      //   document.body.insertBefore(newDiv, prevDiv);
+
+      let prevDiv = document.getElementById("div1");
+      // Inner text for text html(it doesn't parse tags)
+      //   prevDiv.innerText = `<h1>TEstaksjfklasjdfjklsd</h1>`;
+      // It can also parse html tags.
+      //   prevDiv.innerHTML = `<h1>TEstaksjfklasjdfjklsd</h1>`;
+    </script>
+  </body>
+</html>
